@@ -84,7 +84,7 @@ Iterator List::erase(Iterator iter){
 }
 
 Link::Link(int n) {
-data = n;
+        data = n;
         next = NULL;
 }
 
@@ -112,9 +112,6 @@ void List::push_back(int x) { // pushes number into last part of list
 
                 link->next = new Link(x);
         }
-
-
-
 }
 
 void List::push_front(int x) { // pushes a number into the last part of list
@@ -123,7 +120,7 @@ void List::push_front(int x) { // pushes a number into the last part of list
                 first = new Link(x);
         }
 
-        else {
+         else {
          Link* new_Link = new Link(x);
                 Link * link = first;
                 new_Link->next = first;
@@ -146,7 +143,7 @@ void List::pop_front(){ //removes first part of list
 void List::insert(Iterator iter, int x){//pushes number into specific part list
 
         if(iter.position == NULL){//skips unneed steps if list empty
-         push_back(x);
+                push_back(x);
                 return;
         }
 
